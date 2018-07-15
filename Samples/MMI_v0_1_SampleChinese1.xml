@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChartGroup xml:lang="ch-CN" label="综合样例1" author="亲涛 @ Mind Mining Intiative" version="0.1"
+    version-date="2018-07-14" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:mmi:mmbase ..//Schema/MindMiningXML.xsd" xmlns="urn:mmi:mmbase">
+    <Chart label="天盘样例1">
+        <CelestialChartRootItem xml:lang="ch-CN" label="天盘起始中心，即根元素项">
+            <Item label="2(1)">
+                <Content>更多内容可以添加在每个元素项(即Item)里面</Content>
+            </Item>
+            <Item label="2(2)">
+                <Item label="2(2)3(1)"> </Item>
+                <Item label="2(2)3(2)">
+                    <Item label="2(2)3(2)4(1)"> </Item>
+                </Item>
+            </Item>
+            <Item label="2(3)">
+                <Item label="2(3)3(1)"/>
+                <Item label="2(3)3(2)"/>
+                <Item label="2(3)3(3)"/>
+            </Item>
+        </CelestialChartRootItem>
+    </Chart>
+
+    <Chart label="地盘样例1">
+        <TerrestrialChartRootItem label="地盘起始中心，即根元素项">
+            <Item label="2(1)">
+                <Content>更多内容可以添加在每个元素项(即Item)里面</Content>
+            </Item>
+            <Item label="2(2)">
+                <Item label="2(2)3(1)"> </Item>
+                <Item label="2(2)3(2)">
+                    <Item label="2(2)3(2)4(1)"> </Item>
+                </Item>
+            </Item>
+            <Item label="2(3)">
+                <Item label="2(3)3(1)"/>
+                <Item label="2(3)3(2)"/>
+                <Item label="2(3)3(3)"/>
+            </Item>
+        </TerrestrialChartRootItem>
+    </Chart>
+
+    <Chart label="三叶轮样例1">
+        <TriCloverWheel label="三叶轮样例1">
+            <CloverOne label="叶片1">
+                <Chart label="嵌入三叶轮">
+                    <TriCloverWheel>
+                        <CloverOne>
+                            <Chart>
+                                <Content>嵌入轮内容1</Content>
+                            </Chart>
+                        </CloverOne>
+                        <CloverTwo>
+                            <Chart>
+                                <Content>嵌入轮内容2</Content>
+                            </Chart>
+                        </CloverTwo>
+                        <CloverThree>
+                            <Chart>
+                                <Content>嵌入轮内容3</Content>
+                            </Chart>
+                        </CloverThree>
+                    </TriCloverWheel>
+                </Chart>
+            </CloverOne>
+            <CloverTwo label="叶片2">
+                <Chart label="自由文字">
+                    <Content>内容2</Content>
+                </Chart>
+            </CloverTwo>
+            <CloverThree label="叶片3">
+                <Chart label="嵌入天盘">
+                    <CelestialChartRootItem label="95%:1">
+                        <Item label="95%:1-2-1"> </Item>
+                        <Item label="95%:1-2-2">
+                            <Item label="95%:1-2-2-1"> </Item>
+                        </Item>
+                    </CelestialChartRootItem>
+                </Chart>
+            </CloverThree>
+        </TriCloverWheel>
+    </Chart>
+
+    <Chart label="三门系统样例1">
+        <ThreeGateSystem label="三门系统" xml:lang="ch-CN">
+            <ProblemGate label="问题门">
+                <Item label="问题1"> </Item>
+                <Item label="问题2">
+                    <Item label="问题2-1"/>
+                    <Item label="问题2-2">
+                        <Item label="问题2-2-1"> </Item>
+                    </Item>
+                </Item>
+            </ProblemGate>
+            <PrincipleGate label="规律门">
+                <Item label="规律1">
+                    <Item label="规律1-1"/>
+                </Item>
+                <Item label="规律2"/>
+            </PrincipleGate>
+            <PracticeGate label="实践门">
+                <Item label="实践1"/>
+                <Item label="实践2"/>
+                <Item label="实践3"/>
+            </PracticeGate>
+        </ThreeGateSystem>
+    </Chart>
+
+    <Chart label="双金字塔样例1">
+        <DualPyramid label="双金字塔样例1">
+            <UpperPyramid label="上金子塔-95%">
+                <Chart>
+                    <CelestialChartRootItem label="95%:1">
+                        <Item label="95%:1-2-1"> </Item>
+                        <Item label="95%:1-2-2">
+                            <Item label="95%:1-2-2-1"> </Item>
+                        </Item>
+                    </CelestialChartRootItem>
+                </Chart>
+            </UpperPyramid>
+            <LowerPyramid label="下金子塔-5%">
+                <Chart>
+                    <Content>5%:具体说明</Content>
+                </Chart>
+            </LowerPyramid>
+        </DualPyramid>
+    </Chart>
+
+    <Chart label="较复杂的问题机会轮样例1">
+        <ProblemOpportunityWheel label="问题机会轮1">
+            <YinHalf label="阴">
+                <Chart>
+                    <CelestialChartRootItem label="问题1">
+                        <Item label="问题1-1"> </Item>
+                        <Item label="问题1-2">
+                            <Item label="问题1-2-1"> </Item>
+                        </Item>
+                    </CelestialChartRootItem>
+                </Chart>
+                <Chart>
+                    <CelestialChartRootItem label="问题2"/>
+                </Chart>
+                <Chart>
+                    <TerrestrialChartRootItem label="问题3">
+                        <Item label="问题3-1">
+                            <Item label="问题3-1-1"> </Item>
+                        </Item>
+                    </TerrestrialChartRootItem>
+                </Chart>
+                <Chart>
+                    <ProblemOpportunityWheel label="问题4">
+                        <YinHalf label="问题4-阴">
+                            <Chart>
+                                <CelestialChartRootItem label="问题4-问题1"/>
+                            </Chart>
+                        </YinHalf>
+                        <YangHalf label="问题4-阳">
+                            <Chart>
+                                <DualPyramid label="问题4-机会">
+                                    <UpperPyramid label="问题4-机会-95%">
+                                        <Chart>
+                                            <CelestialChartRootItem label="问题4-机会-95%:1">
+                                                <Item label="问题4-机会-95%:1-2-1"> </Item>
+                                                <Item label="问题4-机会-95%:1-2-2">
+                                                  <Item label="问题4-机会-95%:1-2-2-1"> </Item>
+                                                </Item>
+                                            </CelestialChartRootItem>
+                                        </Chart>
+                                    </UpperPyramid>
+                                    <LowerPyramid label="问题4-机会-5%">
+                                        <Chart>
+                                            <CelestialChartRootItem label="问题4-机会-5%:2">
+                                                <Content>问题4-机会-5%:2-具体说明</Content>
+                                            </CelestialChartRootItem>
+                                        </Chart>
+                                    </LowerPyramid>
+                                </DualPyramid>
+                            </Chart>
+                        </YangHalf>
+                    </ProblemOpportunityWheel>
+                </Chart>
+
+                <Chart>
+                    <ThreeGateSystem label="问题5">
+                        <ProblemGate label="问题5-问题门">
+                            <Item label="问题5-问题门-问题1"/>
+                            <Item label="问题5-问题门-问题2"/>
+                            <Item label="问题5-问题门-问题3"/>
+                        </ProblemGate>
+                        <PrincipleGate label="问题5-规律门">
+                            <Item label="问题5-问题门-规律1"/>
+                        </PrincipleGate>
+                        <PracticeGate label="问题5-实践门">
+                            <Item label="问题5-问题门-实践1"/>
+                        </PracticeGate>
+                    </ThreeGateSystem>
+                </Chart>
+
+                <Chart>
+                    <DualPyramid label="问题6">
+                        <UpperPyramid label="问题6-95%">
+                            <Chart>
+                                <CelestialChartRootItem label="问题6-95%:1">
+                                    <Item label="问题6-95%:2-1"> </Item>
+                                    <Item label="问题6-95%:2-2">
+                                        <Item label="问题6-95%:2-2-1"> </Item>
+                                    </Item>
+                                </CelestialChartRootItem>
+                            </Chart>
+                            <Chart>
+                                <CelestialChartRootItem label="问题6-95%:2"> </CelestialChartRootItem>
+                            </Chart>
+                        </UpperPyramid>
+                        <LowerPyramid label="问题6-5%"> </LowerPyramid>
+                    </DualPyramid>
+                </Chart>
+                <Chart>
+                    <TriCloverWheel label="问题7">
+                        <CloverOne>
+                            <Chart>
+                                <TriCloverWheel label="label57">
+                                    <CloverOne> </CloverOne>
+                                    <CloverTwo> </CloverTwo>
+                                    <CloverThree> </CloverThree>
+                                </TriCloverWheel>
+                            </Chart>
+                        </CloverOne>
+                        <CloverTwo> </CloverTwo>
+                        <CloverThree> </CloverThree>
+                    </TriCloverWheel>
+                </Chart>
+            </YinHalf>
+            <YangHalf label="阳">
+                <Chart>
+                    <TriCloverWheel label="三叶轮-机会1">
+                        <CloverOne> </CloverOne>
+                        <CloverTwo> </CloverTwo>
+                        <CloverThree> </CloverThree>
+                    </TriCloverWheel>
+                </Chart>
+                <Chart label="机会2-自由文字">
+                    <Content>机会2</Content>
+                </Chart>
+                <Chart>
+                    <TriCloverWheel label="三叶轮-机会3">
+                        <CloverOne>
+                            <Chart>
+                                <Content>机会2-描述1</Content>
+                            </Chart>
+                        </CloverOne>
+                        <CloverTwo> </CloverTwo>
+                        <CloverThree> </CloverThree>
+                    </TriCloverWheel>
+                </Chart>
+            </YangHalf>
+        </ProblemOpportunityWheel>
+    </Chart>
+
+    <Chart label="云盘样例1">
+        <CloudChart label="五行分析个人状况">
+            <CoordinateSpace label="定义云盘空间的纵横轴">
+                <Axis label="横轴" orientation="Horizontal">
+                    <Coordinate number="1">生活</Coordinate>
+                    <Coordinate number="2">事业</Coordinate>
+                    <Coordinate number="3">精神成长</Coordinate>
+                </Axis>
+                <Axis label="纵轴" orientation="Vertical">
+                    <Coordinate number="1">火</Coordinate>
+                    <Coordinate number="2">水</Coordinate>
+                    <Coordinate number="3">金</Coordinate>
+                    <Coordinate number="4">土</Coordinate>
+                    <Coordinate number="5">木</Coordinate>
+                </Axis>
+            </CoordinateSpace>
+            <CloudChartPointGroup label="云盘交点提取和分析">
+                <CloudChartPoint label="提取交点1，并分析之">
+                    <CoordinatePosition label="交点1的坐标定位在(1,1)上">
+                        <AxisCoordinate label="横轴" orientation="Horizontal" number="1"
+                            >生活</AxisCoordinate>
+                        <AxisCoordinate label="纵轴" orientation="Vertical" number="1"
+                            >火</AxisCoordinate>
+                    </CoordinatePosition>
+                    <PointChart label="交点1的具体分析">
+                        <Chart label="天盘">
+                            <CelestialChartRootItem label="天盘分析">
+                                <Item label="问题1-1"> </Item>
+                                <Item label="问题1-2">
+                                    <Item label="问题1-2-1"> </Item>
+                                </Item>
+                            </CelestialChartRootItem>
+                        </Chart>
+                        <Chart label="天盘">
+                            <CelestialChartRootItem label="天盘分析（无子节点）">
+                                <Content>具体说明</Content>
+                            </CelestialChartRootItem>
+                        </Chart>
+                        <Chart label="地盘">
+                            <TerrestrialChartRootItem label="地盘分析"/>
+                        </Chart>
+                        <Chart label="三门系统">
+                            <ThreeGateSystem label="三门系统分析">
+                                <ProblemGate label="问题5-问题门">
+                                    <Item label="问题5-问题门-问题1"/>
+                                    <Item label="问题5-问题门-问题2"/>
+                                    <Item label="问题5-问题门-问题3"/>
+                                </ProblemGate>
+                                <PrincipleGate label="问题5-规律门">
+                                    <Item label="问题5-问题门-规律1"/>
+                                </PrincipleGate>
+                                <PracticeGate label="问题5-实践门">
+                                    <Item label="问题5-问题门-实践1"/>
+                                </PracticeGate>
+                            </ThreeGateSystem>
+                        </Chart>
+                        <Chart label="三叶轮">
+                            <TriCloverWheel label="三叶轮分析">
+                                <CloverOne label="问题6-叶片1">
+                                    <Chart>
+                                        <TriCloverWheel label="问题6-叶片1-嵌入三叶轮">
+                                            <CloverOne>
+                                                <Chart>
+                                                  <Content>描述1</Content>
+                                                </Chart>
+                                            </CloverOne>
+                                            <CloverTwo>
+                                                <Chart>
+                                                  <Content>描述2</Content>
+                                                </Chart>
+                                            </CloverTwo>
+                                            <CloverThree>
+                                                <Chart>
+                                                  <Content>描述3</Content>
+                                                </Chart>
+                                            </CloverThree>
+                                        </TriCloverWheel>
+                                    </Chart>
+                                </CloverOne>
+                                <CloverTwo> </CloverTwo>
+                                <CloverThree> </CloverThree>
+                            </TriCloverWheel>
+                        </Chart>
+                    </PointChart>
+                </CloudChartPoint>
+
+                <CloudChartPoint label="提取交点2，并分析之">
+                    <CoordinatePosition label="交点2的坐标定位在(2,2)上">
+                        <AxisCoordinate label="横轴" orientation="Horizontal" number="2"
+                            >事业</AxisCoordinate>
+                        <AxisCoordinate label="纵轴" orientation="Vertical" number="2"
+                            >水</AxisCoordinate>
+                    </CoordinatePosition>
+                    <PointChart label="交点2的具体分析">
+                        <Chart>
+                            <DualPyramid label="全操作分析">
+                                <UpperPyramid label="天盘输入95%">
+                                    <Chart>
+                                        <CelestialChartRootItem label="问题6-95%:1">
+                                            <Item label="问题6-95%:2-1"> </Item>
+                                            <Item label="问题6-95%:2-2">
+                                                <Item label="问题6-95%:2-2-1"> </Item>
+                                            </Item>
+                                        </CelestialChartRootItem>
+                                    </Chart>
+                                    <Chart>
+                                        <CelestialChartRootItem label="问题6-95%:2"/>
+                                    </Chart>
+                                </UpperPyramid>
+                                <LowerPyramid label="输出5%">
+                                    <Chart>
+                                        <TriCloverWheel label="三叶轮输出">
+                                            <CloverOne>
+                                                <Chart>
+                                                  <Content>总结</Content>
+                                                </Chart>
+                                            </CloverOne>
+                                            <CloverTwo>
+                                                <Chart>
+                                                  <Content>感受</Content>
+                                                </Chart>
+                                            </CloverTwo>
+                                            <CloverThree>
+                                                <Chart>
+                                                  <Content>改进</Content>
+                                                </Chart>
+                                            </CloverThree>
+                                        </TriCloverWheel>
+                                    </Chart>
+                                </LowerPyramid>
+                            </DualPyramid>
+                        </Chart>
+                    </PointChart>
+                </CloudChartPoint>
+            </CloudChartPointGroup>
+        </CloudChart>
+    </Chart>
+
+</ChartGroup>

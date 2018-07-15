@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:mmi:mmbase" targetNamespace="urn:mmi:mmbase" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.1">
+    <xs:annotation>
+        <xs:appinfo>
+            MindMiningXML XML schema (XSD)
+            
+            Version 0.1
+            
+            Copyright © 2018 Mind Mining Initiative. All work related to MindMiningXML specifications is licensed under Creative Commons BY-ND, version 4.0 or whatever the latest version available:
+            
+            https://creativecommons.org/licenses/by-nd/4.0/
+            
+            A human-readable summary is available:
+            
+            https://creativecommons.org/licenses/by-nd/4.0/legalcode/
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:annotation>
+        <xs:documentation>
+        <Component>
+            <EntryName>MindMiningXML XML Schema (XSD)</EntryName>
+            <Description>MindMiningXML is a standard format intended primarily to document mind mining data.</Description>
+            <Version>0.1</Version>
+            <VersionDate>2018-07-14</VersionDate>
+            <VersionDescription>Initial Draft</VersionDescription>
+            <Author>Daisy Yutao Guo</Author>
+        </Component>
+    </xs:documentation>
+    </xs:annotation>
+    
+    <!-- Imports -->
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+    
+    <!-- Reusable Elements -->
+ 
+    <xs:element name="Content" type="String4096Type">
+        <xs:annotation>
+            <xs:documentation>More content for description an item. </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+   
+    <xs:element name="Item" type="ItemType">
+        <xs:annotation>
+            <xs:documentation>Basic item (recursive).</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Definition related to Celestial Chart -->
+    <xs:element name="CelestialChartRootItem" type="ItemType">
+        <xs:annotation>
+            <xs:documentation>The root item of a celestial chart.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Definition related to Terrestrial Chart -->
+    <xs:element name="TerrestrialChartRootItem" type="ItemType">
+        <xs:annotation>
+            <xs:documentation>The root item of a terrestrial chart. </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Definitions related to Problem Opportunity Wheel -->
+    <xs:element name="YinHalf" type="ChartContainerType" >
+        <xs:annotation>
+            <xs:documentation>The Yin half.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="YangHalf" type="ChartContainerType" >
+        <xs:annotation>
+            <xs:documentation>The Yang half.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ProblemOpportunityWheel" type="ProblemOpportunityWheelType">
+        <xs:annotation>
+            <xs:documentation>Problem-Opportunity Wheel.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Definitions related to Three-Gate System -->
+    <xs:element name="ProblemGate" type="ItemType" >
+        <xs:annotation>
+            <xs:documentation>Problem Gate.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="PrincipleGate" type="ItemType" >
+        <xs:annotation>
+            <xs:documentation>Principle Gate.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="PracticeGate" type="ItemType" >
+        <xs:annotation>
+            <xs:documentation>Practice Gate.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ThreeGateSystem" type="ThreeGateSystemType" >
+        <xs:annotation>
+            <xs:documentation>Three-Gate System.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Definitions related to Dual-Pyramid -->
+    <xs:element name="UpperPyramid" type="ChartContainerType" >
+        <xs:annotation>
+            <xs:documentation>Upper Pyramid.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="LowerPyramid" type="ChartContainerType" >
+        <xs:annotation>
+            <xs:documentation>Lower Pyramid.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="DualPyramid" type="DualPyramidType">
+        <xs:annotation>
+            <xs:documentation>Dual-Pyramid.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Definitions related to Tri-Clover Wheel -->
+    <xs:element name="CloverOne" type="ChartContainerType">
+        <xs:annotation>
+            <xs:documentation>Clover One.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="CloverTwo" type="ChartContainerType">
+        <xs:annotation>
+            <xs:documentation>Clover Two.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="CloverThree" type="ChartContainerType">
+        <xs:annotation>
+            <xs:documentation>Clover Three.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="TriCloverWheel" type="TriCloverWheelType">
+        <xs:annotation>
+            <xs:documentation>Tri-Clover Wheel.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Definitions related to Cloud Chart -->
+    <xs:element name="Coordinate" type="CoordinateType">
+        <xs:annotation>
+            <xs:documentation>Cooridnate.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="Axis" type="AxisType">
+        <xs:annotation>
+            <xs:documentation>Axis.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="CoordinateSpace" type="CoordinateSpaceType">
+        <xs:annotation>
+            <xs:documentation>Cooridnate Space.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="AxisCoordinate" type="AxisCoordinateType">
+        <xs:annotation>
+            <xs:documentation>Axis Cooridnate.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="CoordinatePosition" type="CoordinatePositionType">
+        <xs:annotation>
+            <xs:documentation>Cooridnate Position.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="PointChart" type="ChartContainerType">
+        <xs:annotation>
+            <xs:documentation>The Chart at a point.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="CloudChartPoint" type="CloudChartPointType">
+        <xs:annotation>
+            <xs:documentation>The chart at a point located on a coordinate space.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="CloudChartPointGroup" type="CloudChartPointGroupType">
+        <xs:annotation>
+            <xs:documentation>A collection of charts at various points located on a coordinate space.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="CloudChart" type="CloudChartType">
+        <xs:annotation>
+            <xs:documentation>Cloud Chart. Established by a a defined coordinate space and a collection of charts at various points located on the coordinate space.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Definitions= related to a chart of choice. -->
+    <xs:element name="Chart" type="ChartOfChoiceType">
+        <xs:annotation>
+            <xs:documentation>Chart of Choice.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Definitions= related to a chart group that may flexibly include any chart(s). -->
+    <xs:element name="ChartGroup" type="ChartContainerType">
+        <xs:annotation>
+            <xs:documentation>Chart Group (may flexibly include any chart(s)).</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Resuable Attribute Groups -->
+    <xs:attributeGroup name="AttributesForString">
+        <xs:attribute ref="xml:lang">
+            <xs:annotation>
+                <xs:documentation>Indicates the language of content. Note that lang allows for a simple 2 or 3 character language code or a language code extended by a country code , for example en-au for English as used in Australia.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute ref="xml:base">
+            <xs:annotation>
+                <xs:documentation>Indicates the base URL.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:attributeGroup>
+    
+    <xs:attributeGroup name="AttributesForLabel">
+        <xs:attribute name="order" type="xs:integer">
+            <xs:annotation>
+                <xs:documentation>The order of the element.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="label" type="String4096SimpleType">
+            <xs:annotation>
+                <xs:documentation>Label Text.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="author" type="String256SimpleType">
+            <xs:annotation>
+                <xs:documentation>Author.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="version-date" type="xs:date">
+            <xs:annotation>
+                <xs:documentation>Date.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="version" type="String256SimpleType">
+            <xs:annotation>
+                <xs:documentation>Version</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attributeGroup ref="AttributesForString"/> 
+    </xs:attributeGroup>
+    
+    <!-- Resuable Simple Types -->
+    <xs:simpleType name="String256SimpleType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a simple string of maximum length 256 characters.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="256"/>      
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="String4096SimpleType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a simple string of maximum length 4096 characters.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="4096"/>      
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- Resuable Complex Types -->
+    
+    <xs:complexType name="String256Type">
+        <xs:annotation>
+            <xs:documentation>Type for describing a string of maximum length 256 characters that allows additional attributes.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="String256SimpleType">
+                <xs:attributeGroup ref="AttributesForString"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:complexType name="String4096Type">
+        <xs:annotation>
+            <xs:documentation>Type for describing a string of maximum length 4096 characters that allows additional attributes.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="String4096SimpleType">
+                <xs:attributeGroup ref="AttributesForString"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:complexType name="ChartOfChoiceType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a chart of choice.</xs:documentation>
+        </xs:annotation>
+        <xs:choice>
+            <xs:element ref="Content" />
+            <xs:element ref="CelestialChartRootItem" />
+            <xs:element ref="TerrestrialChartRootItem" />
+            <xs:element ref="ProblemOpportunityWheel" />
+            <xs:element ref="ThreeGateSystem" />
+            <xs:element ref="DualPyramid" />
+            <xs:element ref="TriCloverWheel" />
+            <xs:element ref="CloudChart" />
+        </xs:choice>
+        <xs:attributeGroup ref="AttributesForLabel"/>
+    </xs:complexType>
+    
+    <xs:complexType name="ItemType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a basic item.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="Content" minOccurs="0"/>
+            <xs:choice>
+                <xs:element ref="Item" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="AttributesForLabel"/>
+    </xs:complexType>
+    
+    <xs:complexType name="ChartContainerType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a flexible chart container.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="Chart" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="AttributesForLabel"/>
+    </xs:complexType>
+    
+    <xs:complexType name="TriCloverWheelType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a Tri-Clover Wheel.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="CloverOne" />
+            <xs:element ref="CloverTwo" />
+            <xs:element ref="CloverThree" />
+        </xs:sequence>
+        <xs:attributeGroup ref="AttributesForLabel"/>
+    </xs:complexType>
+    
+    <xs:complexType name="ProblemOpportunityWheelType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a Problem-Opportunity Wheel.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="YinHalf" />
+            <xs:element ref="YangHalf" />
+        </xs:sequence>
+        <xs:attributeGroup ref="AttributesForLabel"/>
+    </xs:complexType>
+    
+    <xs:complexType name="ThreeGateSystemType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a Three-Gate System.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="ProblemGate" />
+            <xs:element ref="PrincipleGate" />
+            <xs:element ref="PracticeGate" />
+        </xs:sequence>
+        <xs:attributeGroup ref="AttributesForLabel"/>
+    </xs:complexType>
+    
+    <xs:complexType name="DualPyramidType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a Dual-Pyramid.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="UpperPyramid" />
+            <xs:element ref="LowerPyramid" />
+        </xs:sequence>
+        <xs:attributeGroup ref="AttributesForLabel"/>
+    </xs:complexType>
+    
+    
+    <xs:complexType name="CoordinateType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a coordinate (a number as scale indicator, and a literal description.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="String256Type">
+                <xs:attribute name="number" type="xs:nonNegativeInteger"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:complexType name="AxisCoordinateType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a coordinate on an axis (a number as scale indicator, a literal description, and the orientation of the axis.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="CoordinateType">
+                <xs:attribute name="orientation" type="String256SimpleType"/>
+                <xs:attributeGroup ref="AttributesForLabel"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:complexType name="AxisType">
+        <xs:annotation>
+            <xs:documentation>Type for describing an axis (orientation of the axis and a set of cooridinates to describe the scale on the axis.)</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="Coordinate" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="orientation" type="String256SimpleType">
+            <xs:annotation>
+                <xs:documentation>Label Text.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attributeGroup ref="AttributesForLabel"/>
+    </xs:complexType>
+    
+    <xs:complexType name="CoordinateSpaceType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a coordinate space, comprised of a set of defined axes with various orientations.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="Axis" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attributeGroup ref="AttributesForLabel"/>
+    </xs:complexType>
+    
+    <xs:complexType name="CoordinatePositionType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a coordinate position, defined as an intercept of various axes.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="AxisCoordinate" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attributeGroup ref="AttributesForLabel"/>
+    </xs:complexType>
+    
+    <xs:complexType name="CloudChartPointType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a chart at a point located on the coordinate space, defined with the cooridinate position and the chart(s) on the position.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="CoordinatePosition"/>
+            <xs:element ref="PointChart"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="AttributesForLabel"/>
+    </xs:complexType>
+    
+    <xs:complexType name="CloudChartPointGroupType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a collection of charts at various points located on a coordinate space.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="CloudChartPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="AttributesForLabel"/>
+    </xs:complexType>
+    
+    <xs:complexType name="CloudChartType">
+        <xs:annotation>
+            <xs:documentation>Type for describing a Cloud Chart, comprised of a defined coordinate space and a collection of charts at various points located on the coordinate space.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="CoordinateSpace" />
+            <xs:element ref="CloudChartPointGroup" />
+        </xs:sequence>
+        <xs:attributeGroup ref="AttributesForLabel"/>
+    </xs:complexType>
+    
+</xs:schema>
